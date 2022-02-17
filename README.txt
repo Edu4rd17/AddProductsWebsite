@@ -1,0 +1,3 @@
+If you wish to create brand new tables all you have to do is manually create a database with the same name as you have it in the Database class
+and change the password to whatever password you have and then run the command php .\dbSetup\setup.php in the terminal and the tables will be generated for you. Then you're ready to use it.
+WARNING: This command will delete all the information that are already in that database!!!!

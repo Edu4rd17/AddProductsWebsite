@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+}
+
+
+hr.line-below {
+    border: 1px solid black;
+}
+
+.columns {
+    float: left;
+    width: 50%;
+    height: 70px;
+}
+
+.product-title {
+    font-size: 30px;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.top-container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.left-column {
+    padding-left: 20px;
+}
+
+.cancel-button {
+    background-color: #ff1a1a;
+    float: right;
+    margin-right: 30px;
+    margin-top: 35px;
+    font-size: 21px;
+    color: #fff;
+    font-family: 'Trebuchet MS', sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.save-button {
+    background-color: #009879;
+    font-size: 24px;
+    color: #fff;
+    font-family: 'Trebuchet MS', sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+.bottom-title {
+    font-size: 8px;
+    text-align: center;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.page-wrapper {
+    max-width: 700px;
+    width: 100%;
+    margin: 15px auto;
+    box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.125);
+    padding: 20px;
+}
+
+.page-wrapper form {
+    padding: 18px;
+    border: 2px solid lightblue;
+    width: 100%;
+}
+
+.page-wrapper .title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: cadetblue;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.page-wrapper form .save-btn {
+    text-align: center;
+}
+
+
+.page-wrapper .input-field, .page-wrapper .extra_input-field .label-input, .page-wrapper .furniture-field .label-input {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 37px;
+}
+
+.page-wrapper .extra_input-field {
+    margin-bottom: 15px;
+    display: inline-block;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 37px;
+}
+
+.page-wrapper .furniture-field {
+
+    display: inline-block;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.page-wrapper .furniture-field label {
+    width: 150px;
+    color: #757575;
+    margin-right: 10px;
+    font-size: 17px;
+    font-family: 'Trebuchet MS', sans-serif;
+
+}
+
+.page-wrapper .furniture-field .input {
+    width: 100%;
+    outline: none;
+    border: 1px solid #d5dbd9;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.page-wrapper .extra_input-field .product-description, .page-wrapper .furniture-field .product-description {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.page-wrapper .input-field label, .page-wrapper .extra_input-field label, .page-wrapper .input-field .switcher-select option, .page-wrapper .input-field .switcher-select select {
+    width: 150px;
+    color: #757575;
+    margin-right: 10px;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', sans-serif;
+
+}
+
+.page-wrapper .input-field .input, .page-wrapper .extra_input-field .input {
+    width: 100%;
+    outline: none;
+    border: 1px solid #d5dbd9;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.page-wrapper .input-field .switcher-select {
+    position: relative;
+    width: 100%;
+    height: 37px;
+}
+
+.page-wrapper .input-field .switcher-select:before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    border: 8px solid;
+    border-color: #d5dbd9 transparent transparent transparent;
+    pointer-events: none;
+}
+
+.page-wrapper .input-field .switcher-select select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 1px solid #d5dbd9;
+    border-radius: 3px;
+}
+
+.extra_input-field, .furniture-field {
+    display: none;
+}
