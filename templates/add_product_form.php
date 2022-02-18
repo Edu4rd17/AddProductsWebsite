@@ -35,7 +35,8 @@
         </div>
         <div class="input-field">
             <label for="price">Price($)</label>
-            <input class="input" id="price" name="price" pattern="{2,4}"
+            <input class="input" id="price" name="price"
+                   oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
                    title="Please enter in float format e.g 1$ as 1.00! Only letters allowed!" required>
         </div>
         <div class="input-field">

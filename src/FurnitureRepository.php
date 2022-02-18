@@ -87,20 +87,20 @@ class FurnitureRepository
 
     public function deleteF($productsId = [])
     {
+        if ($productsId != null) {
+            foreach ($productsId as $productId) {
+                $sql = 'DELETE FROM furniture WHERE furnitureId = :productId';
 
-        foreach ($productsId as $productId) {
-            $sql = 'DELETE FROM furniture WHERE furnitureId = :productId';
+                // Prepare SQL
 
-            // Prepare SQL
+                $statement = $this->connection->prepare($sql);
 
-            $statement = $this->connection->prepare($sql);
+                // Bind parameters to statement variables
+                $statement->bindParam(':productId', $productId);
 
-            // Bind parameters to statement variables
-            $statement->bindParam(':productId', $productId);
-
-            // Execute statement
-            $noError = $statement->execute();
-
+                // Execute statement
+                $noError = $statement->execute();
+            }
         }
     }
 

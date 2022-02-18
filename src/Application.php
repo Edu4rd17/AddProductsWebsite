@@ -31,13 +31,16 @@ class Application
                 $checkedFurnitureId = $_POST['checkedFurnitureId'];
                 $checkedBookId = $_POST['checkedBookId'];
 
-//                var_dump($checkedDvdId);
-//                var_dump($checkedFurnitureId);
-//                var_dump($checkedBookId);
+                if ($checkedDvdId != null) {
+                    $this->dvdRepository->deleteD($checkedDvdId);
+                }
 
-                $this->dvdRepository->deleteD($checkedDvdId);
-                $this->bookRepository->deleteB($checkedBookId);
-                $this->furnitureRepository->deleteF($checkedFurnitureId);
+                if ($checkedFurnitureId != null) {
+                    $this->furnitureRepository->deleteF($checkedFurnitureId);
+                }
+                if ($checkedBookId != null) {
+                    $this->bookRepository->deleteB($checkedBookId);
+                }
 
                 $mainController->index();
                 break;

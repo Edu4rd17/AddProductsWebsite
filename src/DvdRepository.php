@@ -82,20 +82,20 @@ class DvdRepository
 
     public function deleteD($productsId = [])
     {
+        if ($productsId != null) {
+            foreach ($productsId as $productId) {
+                $sql = 'DELETE FROM dvd WHERE dvdId = :productId';
 
-        foreach ($productsId as $productId) {
-            $sql = 'DELETE FROM dvd WHERE dvdId = :productId';
+                // Prepare SQL
 
-            // Prepare SQL
+                $statement = $this->connection->prepare($sql);
 
-            $statement = $this->connection->prepare($sql);
+                // Bind parameters to statement variables
+                $statement->bindParam(':productId', $productId);
 
-            // Bind parameters to statement variables
-            $statement->bindParam(':productId', $productId);
-
-            // Execute statement
-            $noError = $statement->execute();
-
+                // Execute statement
+                $noError = $statement->execute();
+            }
         }
     }
 
