@@ -25,7 +25,7 @@ class MainController
 
     public function index()
     {
-        $pageTitle = 'Homepage - Display Products';
+        $pageTitle = 'Homepage';
 
         $dvds = $this->dvdRepository->findAll();
         $furnitures = $this->furnitureRepository->findAll();

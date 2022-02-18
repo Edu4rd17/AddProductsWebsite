@@ -194,3 +194,22 @@ hr.line-below {
 .extra_input-field, .furniture-field {
     display: none;
 }
+
+@media only screen and (max-width: 380px) {
+    .product-title {
+        font-size: 18px;
+        margin-top: 40px;
+    }
+
+    .cancel-button {
+        float: right;
+        margin-top: 40px;
+        font-size: 16px;
+    }
+
+    .save-button {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+}

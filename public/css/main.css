@@ -135,5 +135,41 @@ hr.line-below {
     }
 }
 
+@media only screen and (max-width: 500px) {
+    .product-title {
+        font-size: 22px;
+        margin-top: 40px;
+    }
+
+    .buttons {
+        margin-top: 40px;
+        font-size: 15px;
+        margin-right: 10px;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        opacity: 0.9;
+    }
+}
+
+@media only screen and (max-width: 290px) {
+    .product-title {
+        font-size: 14px;
+        margin-top: 50px;
+    }
+
+    .buttons {
+        margin-top: 50px;
+        font-size: 10px;
+        margin-right: 0px;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        opacity: 0.9;
+    }
+}
+
 
 
