@@ -27,10 +27,19 @@ class Application
                 break;
 
             case 'delete_products':
-                $checkedDvdId = $_POST['checkedDvdId'];
-                $checkedFurnitureId = $_POST['checkedFurnitureId'];
-                $checkedBookId = $_POST['checkedBookId'];
+                $checkedDvdId = null;
+                $checkedFurnitureId = null;
+                $checkedBookId = null;
 
+                if (isset($_POST['checkedDvdId'])) {
+                    $checkedDvdId = $_POST['checkedDvdId'];
+                }
+                if (isset($_POST['checkedFurnitureId'])) {
+                    $checkedFurnitureId = $_POST['checkedFurnitureId'];
+                }
+                if (isset($_POST['checkedBookId'])) {
+                    $checkedBookId = $_POST['checkedBookId'];
+                }
                 if ($checkedDvdId != null) {
                     $this->dvdRepository->deleteD($checkedDvdId);
                 }
